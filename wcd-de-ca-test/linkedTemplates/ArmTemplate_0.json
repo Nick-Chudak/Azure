@@ -1006,6 +1006,87 @@
 				"[concat(variables('factoryId'), '/datasets/reviews_source_dataset')]",
 				"[concat(variables('factoryId'), '/linkedServices/ls_my_blob')]"
 			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/Copy daily')]",
+			"type": "Microsoft.DataFactory/factories/triggers",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"runtimeState": "Stopped",
+				"pipelines": [
+					{
+						"pipelineReference": {
+							"referenceName": "copyPostsEveryday",
+							"type": "PipelineReference"
+						},
+						"parameters": {}
+					}
+				],
+				"type": "ScheduleTrigger",
+				"typeProperties": {
+					"recurrence": {
+						"frequency": "Day",
+						"interval": 1,
+						"startTime": "2024-05-27T18:43:00",
+						"endTime": "2024-05-29T18:43:00",
+						"timeZone": "Eastern Standard Time",
+						"schedule": {
+							"minutes": [
+								50
+							],
+							"hours": [
+								14
+							]
+						}
+					}
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/pipelines/copyPostsEveryday')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/Copy weekly')]",
+			"type": "Microsoft.DataFactory/factories/triggers",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"runtimeState": "Stopped",
+				"pipelines": [
+					{
+						"pipelineReference": {
+							"referenceName": "copyOnceWeek",
+							"type": "PipelineReference"
+						},
+						"parameters": {}
+					}
+				],
+				"type": "ScheduleTrigger",
+				"typeProperties": {
+					"recurrence": {
+						"frequency": "Week",
+						"interval": 1,
+						"startTime": "2024-05-27T18:45:00",
+						"endTime": "2024-05-29T18:45:00",
+						"timeZone": "Eastern Standard Time",
+						"schedule": {
+							"minutes": [
+								50
+							],
+							"hours": [
+								14
+							],
+							"weekDays": [
+								"Monday"
+							]
+						}
+					}
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/pipelines/copyOnceWeek')]"
+			]
 		}
 	]
 }
