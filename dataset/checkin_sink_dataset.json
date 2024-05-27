@@ -5,6 +5,12 @@
 			"referenceName": "ls_my_blob",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"name": {
+				"type": "string",
+				"defaultValue": "checkin"
+			}
+		},
 		"folder": {
 			"name": "Sink"
 		},

@@ -5,6 +5,12 @@
 			"referenceName": "ls_my_blob",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"name": {
+				"type": "string",
+				"defaultValue": "businesses"
+			}
+		},
 		"folder": {
 			"name": "Sink"
 		},
@@ -13,6 +19,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": "@dataset.name",
 				"folderPath": "businesses",
 				"fileSystem": "bd-project"
 			},
