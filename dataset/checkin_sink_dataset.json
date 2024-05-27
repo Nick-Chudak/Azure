@@ -19,6 +19,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": "@dataset().name",
 				"folderPath": "checkin",
 				"fileSystem": "bd-project"
 			},

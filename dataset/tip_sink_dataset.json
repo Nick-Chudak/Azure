@@ -19,6 +19,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": "@dataset().name",
 				"folderPath": "tip",
 				"fileSystem": "bd-project"
 			},

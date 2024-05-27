@@ -19,7 +19,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "@dataset.name",
+				"fileName": "@dataset().name",
 				"folderPath": "businesses",
 				"fileSystem": "bd-project"
 			},
