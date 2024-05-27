@@ -1,0 +1,23 @@
+{
+	"name": "reviews_sink_dataset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_my_blob",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Sink"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "reviews",
+				"fileSystem": "bd-project"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
