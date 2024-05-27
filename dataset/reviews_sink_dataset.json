@@ -19,7 +19,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "@dataset().name",
+				"fileName": "@concat(dataset().name, '.csv')",
 				"folderPath": "reviews",
 				"fileSystem": "bd-project"
 			},
