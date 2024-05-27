@@ -1,0 +1,26 @@
+{
+	"name": "businesses_sink_dataset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_my_blob",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Sink"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "businesses",
+				"fileSystem": "bd-project"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}

@@ -5,6 +5,9 @@
 			"referenceName": "ls_rds_pg",
 			"type": "LinkedServiceReference"
 		},
+		"folder": {
+			"name": "Source"
+		},
 		"annotations": [],
 		"type": "PostgreSqlV2Table",
 		"schema": [],
