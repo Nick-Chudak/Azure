@@ -1,0 +1,16 @@
+{
+	"name": "users_dataset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_rds_pg",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "PostgreSqlV2Table",
+		"schema": [],
+		"typeProperties": {
+			"schema": "project",
+			"table": "users"
+		}
+	}
+}
