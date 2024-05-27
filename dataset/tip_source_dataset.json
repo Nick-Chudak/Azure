@@ -8,7 +8,7 @@
 		"parameters": {
 			"name": {
 				"type": "string",
-				"defaultValue": "tip"
+				"defaultValue": "tip_source"
 			}
 		},
 		"folder": {

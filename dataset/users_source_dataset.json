@@ -8,7 +8,7 @@
 		"parameters": {
 			"name": {
 				"type": "string",
-				"defaultValue": "users"
+				"defaultValue": "users_source"
 			}
 		},
 		"folder": {

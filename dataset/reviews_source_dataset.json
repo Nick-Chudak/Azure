@@ -8,7 +8,7 @@
 		"parameters": {
 			"name": {
 				"type": "string",
-				"defaultValue": "reviews"
+				"defaultValue": "reviews_source"
 			}
 		},
 		"folder": {
