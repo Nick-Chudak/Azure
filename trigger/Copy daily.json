@@ -1,0 +1,26 @@
+{
+	"name": "Copy daily",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Day",
+				"interval": 1,
+				"startTime": "2024-05-27T18:43:00",
+				"endTime": "2024-05-29T18:43:00",
+				"timeZone": "Eastern Standard Time",
+				"schedule": {
+					"minutes": [
+						50
+					],
+					"hours": [
+						14
+					]
+				}
+			}
+		}
+	}
+}
