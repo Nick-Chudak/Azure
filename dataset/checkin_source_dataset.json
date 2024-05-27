@@ -1,5 +1,5 @@
 {
-	"name": "checkin_dataset",
+	"name": "checkin_source_dataset",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ls_rds_pg",

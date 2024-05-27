@@ -1,5 +1,5 @@
 {
-	"name": "users_dataset",
+	"name": "users_source_dataset",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ls_rds_pg",

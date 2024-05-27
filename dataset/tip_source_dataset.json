@@ -1,5 +1,5 @@
 {
-	"name": "tip_dataset",
+	"name": "tip_source_dataset",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ls_rds_pg",

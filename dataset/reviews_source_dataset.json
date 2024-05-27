@@ -1,0 +1,60 @@
+{
+	"name": "reviews_source_dataset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_wcd_blob",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Source"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "output",
+				"fileSystem": "de-yelp-daily"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": [
+			{
+				"name": "business_id",
+				"type": "UTF8"
+			},
+			{
+				"name": "cool",
+				"type": "INT64"
+			},
+			{
+				"name": "funny",
+				"type": "INT64"
+			},
+			{
+				"name": "review_id",
+				"type": "UTF8"
+			},
+			{
+				"name": "text",
+				"type": "UTF8"
+			},
+			{
+				"name": "useful",
+				"type": "INT64"
+			},
+			{
+				"name": "user_id",
+				"type": "UTF8"
+			},
+			{
+				"name": "date",
+				"type": "UTF8"
+			},
+			{
+				"name": "dt",
+				"type": "UTF8"
+			}
+		]
+	}
+}
