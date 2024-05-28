@@ -19,6 +19,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'ls_wcd_blob'"
 		},
+		"ls_incremental_load_adls_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_incremental_load_adls'"
+		},
 		"ls_my_blob_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://wcddeadls.dfs.core.windows.net/"
@@ -38,6 +42,10 @@
 		"ls_wcd_blob_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://wcddestorageexternal.dfs.core.windows.net"
+		},
+		"ls_incremental_load_adls_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://wcddestorage.dfs.core.windows.net/"
 		}
 	},
 	"variables": {
@@ -97,6 +105,23 @@
 					"accountKey": {
 						"type": "SecureString",
 						"value": "[parameters('ls_wcd_blob_accountKey')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/ls_incremental_load_adls')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureBlobFS",
+				"typeProperties": {
+					"url": "[parameters('ls_incremental_load_adls_properties_typeProperties_url')]",
+					"accountKey": {
+						"type": "SecureString",
+						"value": "[parameters('ls_incremental_load_adls_accountKey')]"
 					}
 				}
 			},
@@ -849,7 +874,9 @@
 							"dataset": {
 								"referenceName": "users_sink_dataset",
 								"type": "DatasetReference",
-								"parameters": {}
+								"parameters": {
+									"name": "users"
+								}
 							},
 							"logStorageSettings": {
 								"linkedServiceName": {
@@ -890,7 +917,7 @@
 			"properties": {
 				"activities": [
 					{
-						"name": "Delete reviews",
+						"name": "Delete review",
 						"type": "Delete",
 						"dependsOn": [],
 						"policy": {
@@ -928,7 +955,7 @@
 						"type": "Copy",
 						"dependsOn": [
 							{
-								"activity": "Delete reviews",
+								"activity": "Delete review",
 								"dependencyConditions": [
 									"Succeeded"
 								]

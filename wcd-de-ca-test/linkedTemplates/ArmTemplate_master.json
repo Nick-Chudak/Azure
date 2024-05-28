@@ -19,6 +19,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'ls_wcd_blob'"
 		},
+		"ls_incremental_load_adls_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_incremental_load_adls'"
+		},
 		"ls_my_blob_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://wcddeadls.dfs.core.windows.net/"
@@ -38,6 +42,10 @@
 		"ls_wcd_blob_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://wcddestorageexternal.dfs.core.windows.net"
+		},
+		"ls_incremental_load_adls_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://wcddestorage.dfs.core.windows.net/"
 		},
 		"containerUri": {
 			"type": "string",
@@ -75,6 +83,9 @@
 					"ls_wcd_blob_accountKey": {
 						"value": "[parameters('ls_wcd_blob_accountKey')]"
 					},
+					"ls_incremental_load_adls_accountKey": {
+						"value": "[parameters('ls_incremental_load_adls_accountKey')]"
+					},
 					"ls_my_blob_properties_typeProperties_url": {
 						"value": "[parameters('ls_my_blob_properties_typeProperties_url')]"
 					},
@@ -89,6 +100,9 @@
 					},
 					"ls_wcd_blob_properties_typeProperties_url": {
 						"value": "[parameters('ls_wcd_blob_properties_typeProperties_url')]"
+					},
+					"ls_incremental_load_adls_properties_typeProperties_url": {
+						"value": "[parameters('ls_incremental_load_adls_properties_typeProperties_url')]"
 					}
 				}
 			},

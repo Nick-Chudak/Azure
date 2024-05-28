@@ -14,6 +14,9 @@
 		"ls_wcd_blob_accountKey": {
 			"value": ""
 		},
+		"ls_incremental_load_adls_accountKey": {
+			"value": ""
+		},
 		"ls_my_blob_properties_typeProperties_url": {
 			"value": "https://wcddeadls.dfs.core.windows.net/"
 		},
@@ -28,6 +31,9 @@
 		},
 		"ls_wcd_blob_properties_typeProperties_url": {
 			"value": "https://wcddestorageexternal.dfs.core.windows.net"
+		},
+		"ls_incremental_load_adls_properties_typeProperties_url": {
+			"value": "https://wcddestorage.dfs.core.windows.net/"
 		}
 	}
 }
