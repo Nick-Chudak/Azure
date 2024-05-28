@@ -338,7 +338,10 @@
 				"typeProperties": {
 					"dataset": {
 						"referenceName": "users_sink_dataset",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"name": "users"
+						}
 					},
 					"logStorageSettings": {
 						"linkedServiceName": {

@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Delete reviews",
+				"name": "Delete review",
 				"type": "Delete",
 				"dependsOn": [],
 				"policy": {
@@ -41,7 +41,7 @@
 				"type": "Copy",
 				"dependsOn": [
 					{
-						"activity": "Delete reviews",
+						"activity": "Delete review",
 						"dependencyConditions": [
 							"Succeeded"
 						]
